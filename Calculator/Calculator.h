@@ -10,4 +10,6 @@
 
 @interface Calculator : NSObject
 
+- (double) calculate:(NSArray *)tokens;
+
 @end
