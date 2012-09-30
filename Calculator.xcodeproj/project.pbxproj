@@ -23,6 +23,10 @@
 		40D3ED271618DCB1004A20B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D3ED021618DCB1004A20B6 /* Foundation.framework */; };
 		40D3ED2F1618DCB1004A20B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40D3ED2D1618DCB1004A20B6 /* InfoPlist.strings */; };
 		40D3ED321618DCB1004A20B6 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D3ED311618DCB1004A20B6 /* CalculatorTests.m */; };
+		40D3ED411618E323004A20B6 /* button-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 40D3ED3F1618E323004A20B6 /* button-dark.png */; };
+		40D3ED421618E323004A20B6 /* button-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 40D3ED401618E323004A20B6 /* button-light.png */; };
+		40D3ED451618E48C004A20B6 /* button-delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 40D3ED441618E48C004A20B6 /* button-delete.png */; };
+		40D3ED481618F9BC004A20B6 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D3ED471618F9BC004A20B6 /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,11 @@
 		40D3ED2E1618DCB1004A20B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		40D3ED301618DCB1004A20B6 /* CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorTests.h; sourceTree = "<group>"; };
 		40D3ED311618DCB1004A20B6 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		40D3ED3F1618E323004A20B6 /* button-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-dark.png"; sourceTree = "<group>"; };
+		40D3ED401618E323004A20B6 /* button-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-light.png"; sourceTree = "<group>"; };
+		40D3ED441618E48C004A20B6 /* button-delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-delete.png"; sourceTree = "<group>"; };
+		40D3ED461618F9BC004A20B6 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		40D3ED471618F9BC004A20B6 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +129,11 @@
 				40D3ED0F1618DCB1004A20B6 /* CalculatorAppDelegate.h */,
 				40D3ED101618DCB1004A20B6 /* CalculatorAppDelegate.m */,
 				40D3ED181618DCB1004A20B6 /* MainStoryboard.storyboard */,
+				40D3ED461618F9BC004A20B6 /* Calculator.h */,
+				40D3ED471618F9BC004A20B6 /* Calculator.m */,
+				40D3ED441618E48C004A20B6 /* button-delete.png */,
+				40D3ED3F1618E323004A20B6 /* button-dark.png */,
+				40D3ED401618E323004A20B6 /* button-light.png */,
 				40D3ED1B1618DCB1004A20B6 /* CalculatorViewController.h */,
 				40D3ED1C1618DCB1004A20B6 /* CalculatorViewController.m */,
 				40D3ED071618DCB1004A20B6 /* Supporting Files */,
@@ -237,6 +251,9 @@
 				40D3ED151618DCB1004A20B6 /* Default@2x.png in Resources */,
 				40D3ED171618DCB1004A20B6 /* Default-568h@2x.png in Resources */,
 				40D3ED1A1618DCB1004A20B6 /* MainStoryboard.storyboard in Resources */,
+				40D3ED411618E323004A20B6 /* button-dark.png in Resources */,
+				40D3ED421618E323004A20B6 /* button-light.png in Resources */,
+				40D3ED451618E48C004A20B6 /* button-delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +291,7 @@
 				40D3ED0D1618DCB1004A20B6 /* main.m in Sources */,
 				40D3ED111618DCB1004A20B6 /* CalculatorAppDelegate.m in Sources */,
 				40D3ED1D1618DCB1004A20B6 /* CalculatorViewController.m in Sources */,
+				40D3ED481618F9BC004A20B6 /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +465,7 @@
 				40D3ED371618DCB1004A20B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40D3ED381618DCB1004A20B6 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +474,7 @@
 				40D3ED3A1618DCB1004A20B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
