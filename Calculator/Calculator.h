@@ -10,6 +10,6 @@
 
 @interface Calculator : NSObject
 
-- (NSNumber *) calculate:(NSArray *)tokens;
+- (NSNumber *) calculate:(NSString *)operationString;
 
 @end

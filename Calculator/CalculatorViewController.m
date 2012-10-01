@@ -25,17 +25,18 @@
 @synthesize lastEnteredOperation = _lastEnteredOperation;
 @synthesize calculator = _calculator;
 
+- (Calculator *) calculator
+{
+  if (!_calculator) _calculator = [[Calculator alloc] init];
+  return _calculator;
+}
+
 - (IBAction) digitPressed:(UIButton *)sender
 {
   NSString *digit = sender.currentTitle;
 
-  if (self.isDisplayingResult) {
-    // Start off new calculator input by simply displaying digit
-    self.display.text = digit;
-  } else {
-    // Append digit to output display
-    self.display.text = [self.display.text stringByAppendingString:digit];
-  }
+  // Append digit to output display
+  self.display.text = [self.display.text stringByAppendingString:digit];
   
   self.isDisplayingResult = false;
   self.lastEnteredOperation = false;
@@ -67,15 +68,10 @@
 
 - (IBAction) printResult:(id)sender
 {
-  NSArray *tokens = [self.display.text componentsSeparatedByString:@""];
-  NSNumber *result = [self.calculator calculate:tokens];
+  NSNumber *result = [self.calculator calculate:self.display.text];
   
-  if (self.lastEnteredOperation) {
-    self.display.text = [result stringValue];
-    self.isDisplayingResult = true;
-  } else {
-    
-  }
+  self.display.text = [result stringValue];
+  self.isDisplayingResult = true;
 }
 
 
