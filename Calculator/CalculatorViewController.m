@@ -10,7 +10,6 @@
 #import "Calculator.h"
 
 @interface CalculatorViewController ()
-// Private properties & methods go here
 
 @property (nonatomic) BOOL isDisplayingResult;
 @property (nonatomic) BOOL lastEnteredOperation;
@@ -56,18 +55,23 @@
 {
   NSString *displayText = self.display.text;
   
-  if ([displayText length] > 0) {
-    displayText = [displayText substringToIndex:[displayText length] - 1];
+  if (displayText.length > 0) {
+    NSString *newText = [displayText substringToIndex:displayText.length - 1];
+    
+    self.display.text = newText;
+    
+    // If the last character was an operation, we just removed it
+    if (self.lastEnteredOperation) self.lastEnteredOperation = false;
   }
 }
 
 - (IBAction) printResult:(id)sender
 {
   NSArray *tokens = [self.display.text componentsSeparatedByString:@""];
-  // NSString *result = [calculate tokens:tokens];
+  NSNumber *result = [self.calculator calculate:tokens];
   
   if (self.lastEnteredOperation) {
-    self.display.text = @"RESULT";
+    self.display.text = [result stringValue];
     self.isDisplayingResult = true;
   } else {
     

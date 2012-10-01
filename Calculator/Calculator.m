@@ -8,6 +8,21 @@
 
 #import "Calculator.h"
 
+@interface Calculator ()
+
+@end
+
+
 @implementation Calculator
+
+- (NSNumber *) calculate:(NSArray *)tokens
+{
+  for (NSString *tok in tokens) {
+    NSLog(@"got token: %@", tok);
+  }
+  
+  // for each
+  return [NSNumber numberWithDouble:0.0];
+}
 
 @end
