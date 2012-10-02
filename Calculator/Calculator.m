@@ -40,6 +40,9 @@
       values[k+1] = values[k] * values[k+1];
       values[k] = 0;
     } else if ([op isEqualToString:@"÷"]) {
+      // Break early if divide by zero
+      if (values[k+1] == 0) return [NSNumber numberWithDouble:0];
+      
       values[k+1] = values[k] / values[k+1];
       values[k] = 0;
     } else if ([op isEqualToString:@"-"]) {
