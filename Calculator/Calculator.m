@@ -19,7 +19,7 @@
 {
   // Parse out operations and double values from input
   NSCharacterSet *operationSet = [NSCharacterSet characterSetWithCharactersInString:@"+-×÷"];
-  NSCharacterSet *digitSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+  NSCharacterSet *digitSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
   NSMutableArray *valueStrings = [[operationString componentsSeparatedByCharactersInSet:operationSet] mutableCopy];
   NSMutableArray *operations= [[operationString componentsSeparatedByCharactersInSet:digitSet] mutableCopy];
   
@@ -27,15 +27,13 @@
   int i = 0, k = 0;
   
   for (NSString *val in valueStrings) {
-    // NSLog(@"got value: %@", val);
+    // NSLog(@"got value: %f", [val doubleValue]);
     values[i] = [val doubleValue];
     i++;
   }
   
   for (NSString *op in operations) {
     if ([op isEqualToString:@""]) continue;
-    
-    // NSLog(@"got op: %@", op);
     
     // Do some order of operations magic
     if ([op isEqualToString:@"×"]) {
@@ -52,9 +50,9 @@
   }
   
   double result = 0;
-  int j;
-  for (j = 0; j < valueStrings.count; j++) {
-    NSLog(@"new value: %f", values[j]);
+  
+  for (int j = 0; j < valueStrings.count; j++) {
+    // NSLog(@"new value: %f", values[j]);
     result += values[j];
   }
   
